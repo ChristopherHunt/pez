@@ -12,12 +12,13 @@ export LDFLAGS
 
 # Enumeration of all of the library directories to compile for the project
 gpio		:= src/lib/gpio
+pwm     := src/lib/pwm
 
 # Enumeration of all executables for this project
 driver  := src/app/driver
 
 # List containing all of the user libraries for the project
-libraries := $(gpio)
+libraries := $(gpio) $(pwm)
 
 # List containing all of the user applications for the project
 apps := $(driver)
