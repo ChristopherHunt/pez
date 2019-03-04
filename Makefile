@@ -13,15 +13,17 @@ export LDFLAGS
 # Enumeration of all of the library directories to compile for the project
 gpio		:= src/lib/gpio
 pwm     := src/lib/pwm
+servo   := src/lib/servo
 
 # Enumeration of all executables for this project
-driver  := src/app/driver
+led_test 	 := src/app/led_test
+servo_test := src/app/servo_test
 
 # List containing all of the user libraries for the project
-libraries := $(gpio) $(pwm)
+libraries := $(gpio) $(pwm) $(servo)
 
 # List containing all of the user applications for the project
-apps := $(driver)
+apps := $(led_test) $(servo_test)
 
 # List of all directories to build from
 dirs := $(libraries) $(apps)
